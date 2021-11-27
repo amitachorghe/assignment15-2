@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Anagram</title>
+
+    <style>
+      h1 {
+        text-align: center;
+        color: rgba(78, 9, 238, 0.685);
+      }
+      body {
+        background-color: rgb(133, 137, 187);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Anagram</h1>
+    <script>
+        // Check whether two strings are anagram to each other or not 
+        //use console to check the program
+      function checkStringsAnagram(a, b)
+     {
+        var length1 = a.length;
+        var length2 = b.length;
+        var a = prompt("Enter 1st string :");
+        var b = prompt("Enter 2nd string :");
+        if (length1 !== length2)
+         {
+          console.log("Invalid Input");
+          return;
+         }
+        let str1 = a.split("").sort().join("");
+        let str2 = b.split("").sort().join("");
+        if (str1 === str2) 
+        {
+          console.log("The two strings are anagram of each other");
+        }
+         else
+         {
+          console.log("The two strings are not anagram of each other");
+        }
+      }
+      
+      checkStringsAnagram("indian", "adiani");
+    </script>
+  </body>
+</html>
